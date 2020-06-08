@@ -158,7 +158,7 @@ router.post("/register/:user", upload.single("file") , async (req, res) => {
                                 Here is your verification link
                                 <br/>
                                 Please Verify your admin account
-                                <a href="http://localhost:5000/users/verify/${user.secretToken}">Click Here</a>
+                                <a href="https://dsfunapp.herokuapp.com/users/verify/${user.secretToken}">Click Here</a>
                                 <br>
                                 Have a Pleasant Day!!`;
 

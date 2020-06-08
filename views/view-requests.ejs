@@ -13,9 +13,10 @@
     </div>
     
     <div class="customers">
-        <ul class="customer_list" id="cust_list">
+        <ul class="customer_list" id="cust_list" >
             <%for(var i=0 ; i<data.length ; i++){%>
                 <li class="customer_item">
+                    <div style="float: left; width: 65%;">
                 <div class="entry-name">Name</div> : <div class="entry-value"><%=data[i].name%></div>
                 <div class="entry-name">Email</div> : <div class="entry-value"><%=data[i].email%></div>
                 <div class="entry-name">Contact Details</div> : <div class="entry-value"><%=data[i].contact%></div>
@@ -24,6 +25,9 @@
                 <div class="entry-name">Address</div>: <div class="entry-value"><%=data[i].occupation%></div>
                 <a id="delete" href="<%="/users/deleter/" + data[i]._id + "/"%>">Decline Request</a>
                 <a class="update" href="<%="/users/accept/" + data[i]._id + "/"%>">Approve Request</a>
+            </div>
+                <img style="height: 200px; width: 30%; float: right;" class="profile_img" src="<%="/users/image/" + data[i].filename + "/"%>" alt="" >
+                <img style="width: 30%;" src="<%=data[i].filename%>" alt="" >
             </li>
             <%}%>
     

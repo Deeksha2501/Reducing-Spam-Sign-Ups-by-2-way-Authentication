@@ -296,7 +296,7 @@ label {
 
 .customer_list {
 	color : white;
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
   padding: 30px;
   list-style: none;
@@ -317,7 +317,7 @@ label {
 .update{
 	margin-right: 10px;
 	float: right;
-	color: #ace5ff;
+	color: #229917;
 }
 
 .u-centre-text{
