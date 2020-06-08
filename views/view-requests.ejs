@@ -22,7 +22,7 @@
                 <div class="entry-name">Contact Details</div> : <div class="entry-value"><%=data[i].contact%></div>
                 <div class="entry-name">Address</div>: <div class="entry-value"><%=data[i].address%></div>
                 <div class="entry-name">Age</div> : <div class="entry-value"><%=data[i].age%></div>
-                <div class="entry-name">Address</div>: <div class="entry-value"><%=data[i].occupation%></div>
+                <div class="entry-name">Occupation</div>: <div class="entry-value"><%=data[i].occupation%></div>
                 <a id="delete" href="<%="/users/deleter/" + data[i]._id + "/"%>">Decline Request</a>
                 <a class="update" href="<%="/users/accept/" + data[i]._id + "/"%>">Approve Request</a>
             </div>
