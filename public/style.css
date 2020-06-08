@@ -250,6 +250,7 @@ label {
 
 .head {
   float: left;
+  margin: 5px 15px;
 }
 
 .links {
