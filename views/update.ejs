@@ -1,0 +1,79 @@
+<%- include ("partials/header")%>
+
+<div class="register-layout">
+  <%- include ("partials/messages")%>
+  <div class="form">
+    <form action="<%="/users/update/" + data._id + "/"%>" method="POST" class="form form-register" >
+      <div class="form-entries">
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter Name"
+          value="<%= typeof data.name != 'undefined' ? data.name : '' %>"
+        />
+      </div>
+      <div class="form-entries">
+        <input
+          type="text"
+          name="imageCaption"
+          id="imageCaption"
+          placeholder="Enter the Image Caption"
+          value="<%= typeof data.imageCaption != 'undefined' ? data.imageCaption : '' %>"
+        />
+      </div>
+      <div class="form-entries">
+        <input
+          type="number"
+          name="contact"
+          id="contact"
+          placeholder="Enter your Contact Number"
+          value="<%= typeof data.contact != 'undefined' ? data.contact : '' %>"
+        />
+      </div>
+      <div class="form-entries">
+        <input
+          type="text"
+          name="address"
+          id="address"
+          placeholder="Enter your Address"
+          value="<%= typeof data.address != 'undefined' ? data.address : '' %>"
+        >
+      </div>
+      <div class="form-entries">
+        <input
+          type="number"
+          name="age"
+          id="age"
+          placeholder="Enter your Age"
+          value="<%= typeof data.age != 'undefined' ? data.age : '' %>"
+        />
+      </div>
+      <div class="form-entries">
+        <input
+          type="text"
+          name="occupation"
+          id="occupation"
+          placeholder="Enter your Occupation"
+          value="<%= typeof data.occupation != 'undefined' ? data.occupation : '' %>"
+        />
+      </div>
+      <div class="form-entries">
+        <button type="submit" class="sub_btn alter">Submit</button>
+      </div>
+    </form>
+  </div>
+  <div class="alter">
+    Already have an Account? <a href="/users/login">Login</a>
+  </div>
+</div>
+
+<%- include ("partials/footer")%>
+
+
+<!-- <h1>upload</h1>
+<form action="/users/upload" method="POST" enctype="multipart/form-data">
+  <input type="file" name="file" id="file" required>
+  <label for="file" class = "label"><i id = "icon_attach" class="fas fa-paperclip"> </i>  Add*</label>;
+  <button type="submit">submit</button>
+</form> -->

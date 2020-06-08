@@ -1,0 +1,34 @@
+<%- include ("partials/header")%>
+
+<div class="login-layout">
+  <%- include ("partials/messages")%>
+  <div class="form">
+    <form action="/users/login" method="POST" class="form form-login">
+      <div class="form-entries">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter Your Mail ID"
+          
+        />
+      </div>
+      <div class="form-entries">
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter Your Passsword"
+        />
+      </div>
+      <div class="form-entries">
+        <button type="submit" class="sub_btn alter">Submit</button>
+      </div>
+    </form>
+  </div>
+  <div class="alter">
+    New Here? <a href="/users/register/normal-user">Register</a>
+  </div>
+</div>
+
+<%- include ("partials/footer")%>  

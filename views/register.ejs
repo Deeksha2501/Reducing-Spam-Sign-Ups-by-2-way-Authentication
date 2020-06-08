@@ -1,0 +1,103 @@
+<%- include ("partials/header")%>
+
+<div class="register-layout">
+  <%- include ("partials/messages")%>
+  <div class="form">
+    <form action="<%="/users/register/" + user + "/"%>" method="POST" class="form form-register" enctype="multipart/form-data">
+      <div class="form-entries">
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter Name"
+          value="<%= typeof name != 'undefined' ? name : '' %>"
+        />
+      </div>
+      <div class="form-entries">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter Your Mail ID"
+          value="<%= typeof email != 'undefined' ? email : '' %>"
+        />
+      </div>
+      <div class="form-entries">
+        <input
+          type="password"
+          name="password1"
+          id="password1"
+          placeholder="Enter Your Passsword(Minimum 6 charcters)"
+        />
+      </div>
+      <div class="form-entries">
+        <input
+          type="password"
+          name="password2"
+          id="password2"
+          placeholder="Confirm your password"
+        />
+      </div>
+      <div class="form-entries">
+        <input
+          type="text"
+          name="imageCaption"
+          id="imageCaption"
+          placeholder="Enter the Image Caption"
+        />
+      </div>
+      <div class="form-entries">
+        <input
+          type="number"
+          name="contact"
+          id="contact"
+          placeholder="Enter your Contact Number"
+        />
+      </div>
+      <div class="form-entries">
+        <input
+          type="text"
+          name="address"
+          id="address"
+          placeholder="Enter your Address"
+        >
+      </div>
+      <div class="form-entries">
+        <input
+          type="number"
+          name="age"
+          id="age"
+          placeholder="Enter your Age"
+        />
+      </div>
+      <div class="form-entries">
+        <input
+          type="text"
+          name="occupation"
+          id="occupation"
+          placeholder="Enter your Occupation"
+        />
+      </div>
+      <div class="form-entries">
+      <input type="file" name="file" id="file">
+      <label for="file" class = "label">Add Profile Image</label><br>
+    </div>
+    <div class="form-entries">
+      <button type="submit" class="sub_btn alter">Submit</button>
+    </div>
+    </form>
+  </div>
+  <div class="alter">
+    Already have an Account? <a href="/users/login">Login</a>
+  </div>
+</div>
+
+<%- include ("partials/footer")%>
+
+
+<!-- <h1>upload</h1>
+<form action="/users/upload" method="POST" enctype="multipart/form-data">
+  <input type="file" name="file" id="file" required>
+  <label for="file" class = "label"><i id = "icon_attach" class="fas fa-paperclip"> </i>  Add*</label>;
+  <button type="submit">submit</button>
+</form> -->

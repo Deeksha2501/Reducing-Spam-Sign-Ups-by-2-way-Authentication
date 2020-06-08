@@ -1,0 +1,37 @@
+<%- include ("partials/header")%>
+
+<div class="dashboard">
+<div class="head">
+<h1>Hello <%=user.name %></h1>
+<% if(user.isAdmin){ %>
+    (Admin)
+</div>
+<div class="links">
+    <a href="/users/all-users" class="a_links">Get users</a>
+    <a href="/users/view-requests" class="a_links">Pending Requests</a>
+<% } %>
+<a class="a_links" href="<%="/users/update/" + user._id + "/"%>">Update credentials</a>
+<a href="/users/logout" class="a_links logout">LOGOUT</a>
+
+</div>
+
+
+<div class="img">
+<img class="profile_img" src="<%="/users/image/" + user.filename + "/"%>" alt="" >
+<img src="<%=user.filename%>" alt="" class="profile_img">
+</div>
+<div>
+
+</div>
+</div>
+<div class="credentials">
+    <div class="cred">
+        <div class="entry-name">Name</div> : <div class="entry-value"><%=user.name%></div>
+        <div class="entry-name">Email</div> : <div class="entry-value"><%=user.email%></div>
+        <div class="entry-name">Contact Details</div> : <div class="entry-value"><%=user.contact%></div>
+        <div class="entry-name">Address</div>: <div class="entry-value"><%=user.address%></div>
+        <div class="entry-name">Age</div> : <div class="entry-value"><%=user.age%></div>
+        <div class="entry-name">Occupation</div>: <div class="entry-value"><%=user.occupation%></div>
+    </div>
+<!-- <div>&nbsp;</div> -->
+</div>

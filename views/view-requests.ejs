@@ -1,0 +1,29 @@
+<%- include ("partials/header")%>
+<a style="color: white; font-size: 20px;" href="/dashboard">&larr; Back</a>
+<!-- <%for(var i=0 ; i<data.length ; i++){%>
+    <h1><%=data[i].name%></h1>
+    <a href="<%="/users/delete/" + data[i]._id + "/"%>">Decline Request</a>
+    <a href="<%="/users/accept/" + data[i]._id + "/"%>">Approve Request</a>
+    <%}%> -->
+
+    <div class="u-centre-text">
+        <h1 class="heading-main">
+           All Requests
+        </h1>
+    </div>
+    
+    <div class="customers">
+        <ul class="customer_list" id="cust_list">
+            <%for(var i=0 ; i<data.length ; i++){%>
+                <li class="customer_item">
+                <div class="entry-name">Name</div> : <div class="entry-value"><%=data[i].name%></div>
+                <div class="entry-name">Email</div> : <div class="entry-value"><%=data[i].email%></div>
+                <div class="entry-name">Contact Details</div> : <div class="entry-value"><%=data[i].contact%></div>
+                <div class="entry-name">Address</div>: <div class="entry-value"><%=data[i].address%></div>
+                <div class="entry-name">Age</div> : <div class="entry-value"><%=data[i].age%></div>
+                <div class="entry-name">Address</div>: <div class="entry-value"><%=data[i].occupation%></div>
+                <a id="delete" href="<%="/users/deleter/" + data[i]._id + "/"%>">Decline Request</a>
+                <a class="update" href="<%="/users/accept/" + data[i]._id + "/"%>">Approve Request</a>
+            </li>
+            <%}%>
+    

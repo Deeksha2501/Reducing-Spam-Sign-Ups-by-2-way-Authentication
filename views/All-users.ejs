@@ -1,0 +1,27 @@
+<%- include ("partials/header")%>
+<a style="color: white; font-size: 20px;" href="/dashboard">&larr; Back</a>
+<div class="u-centre-text">
+    <h1 class="heading-main">
+       All Users
+    </h1>
+</div>
+
+<div class="customers">
+    <ul class="customer_list" id="cust_list">
+        <%for(var i=0 ; i<data.length ; i++)if(!data[i].isAdmin){{%>
+            <li class="customer_item">
+            <div class="entry-name">Name</div> : <div class="entry-value"><%=data[i].name%></div>
+            <div class="entry-name">Email</div> : <div class="entry-value"><%=data[i].email%></div>
+            <div class="entry-name">Contact Details</div> : <div class="entry-value"><%=data[i].contact%></div>
+            <div class="entry-name">Address</div>: <div class="entry-value"><%=data[i].address%></div>
+            <div class="entry-name">Age</div> : <div class="entry-value"><%=data[i].age%></div>
+            <div class="entry-name">Address</div>: <div class="entry-value"><%=data[i].occupation%></div>
+            <a id="delete" href="<%="/users/deleteu/" + data[i]._id + "/"%>">Remove User</a>
+            <a class="update" href="<%="/users/update/" + data[i]._id + "/"%>">Update credentials</a>
+        </li>
+        <%}}%>
+
+
+    </ul>
+    
+</div>
