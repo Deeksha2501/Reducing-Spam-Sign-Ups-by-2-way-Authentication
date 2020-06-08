@@ -1,9 +1,12 @@
 <%- include ("partials/header")%>
 
 <div class="register-layout">
+  <div style="padding-top: 0; padding-bottom: 20px;" class="dash_head">
+    <p class="dash_p">Update</p>
+  </div>
   <%- include ("partials/messages")%>
   <div class="form">
-    <form action="<%="/users/update/" + data._id + "/"%>" method="POST" class="form form-register" >
+    <form action="<%="/users/update/" + data._id + "/"%>" method="POST" class="form form-register" autocomplete="off">
       <div class="form-entries">
         <input
           type="text"
@@ -59,7 +62,7 @@
         />
       </div>
       <div class="form-entries">
-        <button type="submit" class="sub_btn alter">Submit</button>
+        <button style="margin-right: 25%;" type="submit" class="sub_btn alter">Submit</button>
       </div>
     </form>
   </div>

@@ -31,6 +31,7 @@ router.get("/login", (req, res) => {
 
 //REGISTER ROUTER
 router.get("/register/:user", (req, res) => {
+  console.log(req.params.user);
   res.render("register.ejs" , {user : req.params.user});
 });
 
@@ -201,8 +202,7 @@ router.post("/login", (req, res, next) => {
 //logout
 router.get("/logout", (req, res) => {
   req.logOut();
-  req.flash("success_msg", "You are logged out");
-  res.redirect("/users/login");
+  res.redirect("/");
 });
 
 router.post("/upload", upload.single("file"), (req, res) => {
@@ -228,7 +228,7 @@ router.get('/verify/:token' , async (req , res)=>{
 
 })
 
-router.get('/all-users' , async (req , res)=>{
+router.get('/all-users' ,ensureAuthenticated ,  async (req , res)=>{
     // res.send('all');
     const data = await user.find({isActive : true});
     res.render('All-users.ejs' , {data : data});

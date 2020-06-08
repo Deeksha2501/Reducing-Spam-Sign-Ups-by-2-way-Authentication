@@ -154,7 +154,7 @@ a:hover {
 
 .register-layout {
   width: 50%;
-  margin: 70px auto;
+  margin: 10px auto;
   align-items: center;
   color: white;
   /* background-color: red; */
@@ -207,11 +207,26 @@ a:hover {
 
 .sub_btn {
   margin: 0 auto;
-  width: 30%;
+  /* width: 30%; */
+  background: transparent;
+  color: white;
+  outline: none;
+  border: 0;
+  transition: all .2s;
+  /* margin-right: 25%; */
+}
+
+.sub_btn:hover{
+	border: 1px solid rgb(52, 164, 216);
+	border-radius: 5px;
+	font-size: 25px;
+	
 }
 
 label {
   margin-left: 13px;
+  margin-bottom: 20px;
+  float: left;
 }
 
 .alter {

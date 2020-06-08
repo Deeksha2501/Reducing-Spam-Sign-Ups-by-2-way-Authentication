@@ -1,9 +1,12 @@
 <%- include ("partials/header")%>
-
+<a style="color: white; font-size: 20px;" href="/">&larr; Back</a>
+<div style="padding-top: 0; padding-bottom: 0px;" class="dash_head">
+  <p class="dash_p">Login</p>
+</div>
 <div class="login-layout">
   <%- include ("partials/messages")%>
   <div class="form">
-    <form action="/users/login" method="POST" class="form form-login">
+    <form action="/users/login" method="POST" class="form form-login" autocomplete="off">
       <div class="form-entries">
         <input
           type="email"
@@ -21,8 +24,8 @@
           placeholder="Enter Your Passsword"
         />
       </div>
-      <div class="form-entries">
-        <button type="submit" class="sub_btn alter">Submit</button>
+      <div style="margin-bottom: 20px;" class="form-entries">
+        <button  type="submit" class="sub_btn alter">Submit</button>
       </div>
     </form>
   </div>
