@@ -13,6 +13,7 @@ var randomstring = require("randomstring");
 const mailer = require("../misc/mailer");
 const bodyParser = require('body-parser')
 const { ensureAuthenticated } = require('../config/auth');
+require('dotenv').config();
 
 router.use(express.static("public"));
 
@@ -30,13 +31,11 @@ router.get("/login", (req, res) => {
 });
 
 //REGISTER ROUTER
-router.get("/register/:user", (req, res) => {
-  console.log(req.params.user);
-  res.render("register.ejs" , {user : req.params.user});
-});
 
-const mongoURI =
-  "mongodb+srv://deekshanith325:2515@nithcluster-3ulqy.mongodb.net/uniworks?retryWrites=true&w=majority";
+
+// const mongoURI =
+//   "mongodb+srv://deekshanith325:2515@nithcluster-3ulqy.mongodb.net/uniworks?retryWrites=true&w=majority";
+const mongoURI = process.env.mongo_URI;
 const conn = mongoose.createConnection(mongoURI);
 
 // Init gfs
@@ -162,7 +161,7 @@ router.post("/register/:user", upload.single("file") , async (req, res) => {
                                 <a href="https://dsfunapp.herokuapp.com/users/verify/${user.secretToken}">Click Here</a>
                                 <br>
                                 Have a Pleasant Day!!`;
-
+//http://localhost:5000/users/login
                   //send email
                   await mailer.sendEmail(
                     "sharmadeeksha325@gmail.com",
@@ -212,11 +211,12 @@ router.post("/upload", upload.single("file"), (req, res) => {
 
 router.get('/verify/:token' , async (req , res)=>{
     const secretToken = req.params.token;
+    console.log('abc');
     // res.send(secretToken);
     const user = await User.findOne({ 'secretToken' : secretToken});
     if(!user){
         req.flash('error' , 'SOMETHNG WENT WRONG , PLEASE REGISTER AGAIN');
-        res.redirect('/users/register');
+        res.redirect('/users/register/admin/');
         return;
     }
     user.isAdmin = true;
@@ -313,5 +313,9 @@ router.post('/update/:id',ensureAuthenticated,  async (req , res)=>{
     res.render('dashboard.ejs' , {user : up_user});
 })
 
-  
+router.get("/register/:user/", (req, res) => {
+  console.log("abc" , req.params.user);
+  res.render("register.ejs" , {user : req.params.user});
+});
+
 module.exports = router;
