@@ -14,3 +14,5 @@ This is my practice project where I have tried to implement
 - Implemented using Node.js as Library and Express.js as a framework
 
 [Deployed project](https://dsfunapp.herokuapp.com/)
+
+![gif](gif.gif)
