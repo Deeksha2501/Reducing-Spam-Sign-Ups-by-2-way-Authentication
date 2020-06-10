@@ -20,4 +20,4 @@ This is my practice project where I have tried to implement
 
 
 - [x] Deplyement
-- [ ] Responsive website
+- [ ] Responsive layout
