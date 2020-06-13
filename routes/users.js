@@ -36,7 +36,8 @@ router.get("/login", (req, res) => {
 // const mongoURI =
 //   "mongodb+srv://deekshanith325:2515@nithcluster-3ulqy.mongodb.net/uniworks?retryWrites=true&w=majority";
 const mongoURI = process.env.mongo_URI;
-const conn = mongoose.createConnection(mongoURI);
+var uri = 'mongodb+srv://deekshanith325:2515@nithcluster-3ulqy.mongodb.net/uniworks?retryWrites=true&w=majority'
+const conn = mongoose.createConnection(uri);
 
 // Init gfs
 let gfs;
