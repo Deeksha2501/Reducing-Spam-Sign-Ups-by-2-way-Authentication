@@ -341,3 +341,14 @@ label {
 	color : white;
 	margin-top : 20px;
 }
+
+#user-icon{
+  font-size: 133px;
+  margin-left: 15%;
+  margin-top: 2%;
+}
+#u-icon{
+  font-size: 170px;
+  margin-left: 42%;
+  margin-top: 14%;
+}

@@ -70,7 +70,7 @@ const upload = multer({ storage });
 
 //REGISTER HANDLE
 router.post("/register/:user", upload.single("file") , async (req, res) => {
-    var filename = "https://cdn4.iconfinder.com/data/icons/instagram-ui-twotone/48/Paul-18-512.png"
+    var filename = "abc"
     if(req.file != undefined){
         var filename = req.file.filename;
     }
@@ -79,7 +79,7 @@ router.post("/register/:user", upload.single("file") , async (req, res) => {
   try {
     const { name, email, password1, password2, imageCaption , contact , address , age , occupation  } = req.body;
     // console.log({ name, email, password1, password2, AdminCode  , filename});
-
+    var u = req.params.user;
     let errors = [];
 
     //Check required Fields
@@ -110,7 +110,7 @@ router.post("/register/:user", upload.single("file") , async (req, res) => {
         errors: errors,
         name: name,
         email: email,
-        
+        user : u
       });
     } else {
       //Validation passed
@@ -125,6 +125,7 @@ router.post("/register/:user", upload.single("file") , async (req, res) => {
             ],
             name: name,
             email: email,
+            user : u
           });
         } else {
           const newUser = new User({

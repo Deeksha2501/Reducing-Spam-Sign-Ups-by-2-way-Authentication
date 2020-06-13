@@ -30,7 +30,6 @@ const UserSchema = new mongoose.Schema({
   },
   filename : {
     type : String,
-    default : 'https://cdn4.iconfinder.com/data/icons/instagram-ui-twotone/48/Paul-18-512.png'
   },
   imageCaption : String,
   contact : String,

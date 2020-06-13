@@ -17,8 +17,11 @@
 
 
 <div class="img">
-<img class="profile_img" src="<%="/users/image/" + user.filename + "/"%>" alt="" >
-<img src="<%=user.filename%>" alt="" class="profile_img">
+    <%if(user.filename != 'abc'){%>
+        <img class="profile_img" src="<%="/users/image/" + user.filename + "/"%>" alt="" >
+    <%}else{%>
+        <i id="u-icon" class="far fa-user" ></i>
+    <%}%>
 <div style="text-align: center;"><%=user.imageCaption%></div>
 </div>
 <div>
