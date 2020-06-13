@@ -11,7 +11,7 @@ This is my practice project where I have tried to implement
   - Edit Credentials
   - Delete his Account
 - Everyone cannot register as Admin , for registering as Admin you have to provide your email ID to the developer(Deeksha Sharma).
-- Implemented using Node.js as Library and Express.js as a framework
+- Implemented using Node.js and Express.js as a framework
 
 [Deployed project](https://dsfunapp.herokuapp.com/)<br><br>
 [![HitCount](http://hits.dwyl.com/Deeksha2501/Reducing-Spam-Sign-Ups-by-2-way-Authentication.svg)](http://hits.dwyl.com/Deeksha2501/Reducing-Spam-Sign-Ups-by-2-way-Authentication)
