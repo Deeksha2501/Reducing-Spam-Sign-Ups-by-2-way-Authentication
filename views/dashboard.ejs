@@ -18,9 +18,10 @@
 
 <div class="img">
     <%if(user.filename != 'abc'){%>
-        <img class="profile_img" src="<%="/users/image/" + user.filename + "/"%>" alt="" >
+        <img class="profile_img-alt" src="<%="/users/image/" + user.filename + "/"%>" alt="Profile Image" >
     <%}else{%>
-        <i id="u-icon" class="far fa-user" ></i>
+        <!-- <i id="u-icon" class="far fa-user" ></i> -->
+        <img class="profile_img-alt" src="/profile-img.png" alt="Profile Image" >
     <%}%>
 <div style="text-align: center;"><%=user.imageCaption%></div>
 </div>
@@ -37,5 +38,4 @@
         <div class="entry-name">Age</div> : <div class="entry-value"><%=user.age%></div>
         <div class="entry-name">Occupation</div>: <div class="entry-value"><%=user.occupation%></div>
     </div>
-<!-- <div>&nbsp;</div> -->
 </div>

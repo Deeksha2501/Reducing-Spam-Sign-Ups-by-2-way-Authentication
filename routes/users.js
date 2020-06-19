@@ -33,11 +33,8 @@ router.get("/login", (req, res) => {
 //REGISTER ROUTER
 
 
-// const mongoURI =
-//   "mongodb+srv://deekshanith325:2515@nithcluster-3ulqy.mongodb.net/uniworks?retryWrites=true&w=majority";
 const mongoURI = process.env.mongo_URI;
 const uri = process.env.mongo_URI;
-// var uri = 'mongodb+srv://deekshanith325:2515@nithcluster-3ulqy.mongodb.net/uniworks?retryWrites=true&w=majority'
 const conn = mongoose.createConnection(uri);
 
 // Init gfs
