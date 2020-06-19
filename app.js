@@ -39,7 +39,8 @@ app.use(function(req, res, next) {
 const mongo_uri = require('./config/keys').mongo_URI;
 console.log({mongo_uri});
 
-var url = 'mongodb+srv://deekshanith325:2515@nithcluster-3ulqy.mongodb.net/uniworks?retryWrites=true&w=majority'
+// var url = 'mongodb+srv://deekshanith325:2515@nithcluster-3ulqy.mongodb.net/uniworks?retryWrites=true&w=majority'
+var url = process.env.mongo_URI;
 
 //Connect to mongo
 var conn = mongoose.connect(url , { useNewUrlParser: true  , useUnifiedTopology: true} , (err)=>{
