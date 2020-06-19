@@ -16,7 +16,7 @@ This is my practice project where I have tried to implement
 [Deployed project](https://dsfunapp.herokuapp.com/)<br><br>
 [![HitCount](http://hits.dwyl.com/Deeksha2501/Reducing-Spam-Sign-Ups-by-2-way-Authentication.svg)](http://hits.dwyl.com/Deeksha2501/Reducing-Spam-Sign-Ups-by-2-way-Authentication)
 
-![gif](gif.gif)
+![gif](finalgif.gif)
 
 
 - [x] Deplyement
