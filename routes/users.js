@@ -163,13 +163,18 @@ router.post("/register/:user", upload.single("file") , async (req, res) => {
                                 Have a Pleasant Day!!`;
 //http://localhost:5000/users/login
                   //send email
+                  try{
                   await mailer.sendEmail(
                     "sharmadeeksha325@gmail.com",
                     user.email,
                     "Please Verify your email!",
                     html
-                  );
-                  req.flash("success_msg", "Please check your email");
+                    );
+                    req.flash("success_msg", "Please check your email");
+                  }
+                  catch(e){
+                    req.flash("error", "Please contact the developer for registering your account as admin account(mailID : sharmadeeksha325@gmail.com)");
+                  }
                     }
                     else{
                     req.flash("success_msg", "You are successfully registered wait for Admin approval");
