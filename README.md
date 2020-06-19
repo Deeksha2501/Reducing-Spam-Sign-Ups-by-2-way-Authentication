@@ -1,7 +1,7 @@
 ## LOGIN REGISTER APP
 This is my practice project where I have tried to implement
 - Authentication on login and Sign up using Passport
-- To reduce spam registrations authentication is made by two ways
+- To reduce spam registrations, authentication is made by two ways
   - By sending a verification link to user email(admin only)
   - By admin approval(normal users)
 - Admin can 
